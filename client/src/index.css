@@ -1,0 +1,95 @@
+@import 'mapbox-gl/dist/mapbox-gl.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-page: #F8FAFC;
+  --color-card: #FFFFFF;
+  --color-border: #E2E8F0;
+  --color-primary: #1E40AF;
+  --color-primary-dark: #1E3A8A;
+  --color-agri: #15803D;
+  --color-agri-light: #F0FDF4;
+  --color-warning: #D97706;
+  --color-medium: #EA580C;
+  --color-high: #DC2626;
+  --color-text-main: #0F172A;
+  --color-text-secondary: #475569;
+}
+
+body {
+  background-color: var(--color-page);
+  color: var(--color-text-main);
+  font-family: 'Inter', 'Noto Sans Devanagari', 'Noto Sans', system-ui, -apple-system, sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Ensure farmer touch targets are at least 44px */
+.farmer-tap-target {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+/* Modern GovTech Elevated Card */
+.gov-card {
+  background-color: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.04), 0 1px 2px -1px rgba(0, 0, 0, 0.04);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.gov-card:hover {
+  box-shadow: 0 4px 12px -2px rgba(0, 0, 0, 0.06), 0 2px 4px -2px rgba(0, 0, 0, 0.04);
+}
+
+/* Glassmorphic Panel */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+/* Premium Dark Command Strip */
+.command-strip {
+  background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
+  color: #F8FAFC;
+}
+
+/* Custom Sleek Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F1F5F9;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
+
+/* Pulsing Live Beacon */
+@keyframes beacon-pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.4);
+    opacity: 0.4;
+  }
+}
+.beacon-dot {
+  animation: beacon-pulse 2s infinite ease-in-out;
+}
