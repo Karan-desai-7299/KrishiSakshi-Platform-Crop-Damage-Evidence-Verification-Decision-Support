@@ -4,6 +4,8 @@
   "private": true,
   "description": "KrishiSakshi - Rapid Response Crop Loss Verification Decision Support",
   "scripts": {
+    "build": "npm --prefix client install && npm --prefix client run build && npm --prefix server install",
+    "start": "node server/src/server.js",
     "dev:client": "npm run dev --prefix client",
     "dev:server": "npm run dev --prefix server",
     "seed": "npm run seed --prefix server",
